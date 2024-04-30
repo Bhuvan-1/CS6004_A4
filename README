@@ -1,0 +1,12 @@
+# RUNNING INSTRUCTIONS
+-   Compile the transformation code : `javac -cp .:soot.jar *.java`
+-   To run transformation on a `Test.java` inside the `testcase/` folder : `javac Test.java` and `java -cp .:soot.jar PA4`
+-   To run analysis on a testcase Test1 : `bash run.sh Test1`
+-   To run the jvm analysis : `bash jvmrun.sh Test1`
+
+
+# INSTRUCTIONS FOR JVM
+-   the openjdk-openj9-jdk8 folder should be at the root level for the script jvmrun.sh to work.
+-   The folder size is too large and hence not included here
+-   The only changes made were in the two files present in `openj9/runtime/vm/BytecodeInterpreter.hpp` and `openj9/runtime/vm/BytecodeInterpreter.inc`. These can be found in the `JVM/` folder.
+-   Copy the entire openjdk folder here and modify the mentioned two files and perform a `make all` before running the `jvmrun` script.

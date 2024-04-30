@@ -1,0 +1,6 @@
+Test.main
+Runner.run
+A.sort
+A.hash
+B.sort
+B.hash

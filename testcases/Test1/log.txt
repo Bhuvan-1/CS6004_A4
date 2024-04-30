@@ -1,0 +1,617 @@
+Soot started on Tue Apr 30 21:57:54 IST 2024
+=====================================================
+Method : <Runner: void run()>
+Unit : s0 = 1000
+Unit : r0 = newarray (int)[s0]
+Unit : i12 = 0
+Unit : if i12 >= s0 goto $r1 = new A
+Unit : r0[i12] = i12
+Unit : i12 = i12 + 1
+Unit : goto [?= (branch)]
+Unit : $r1 = new A
+Unit : specialinvoke $r1.<A: void <init>(int,int)>(5, 10)
+Unit : r5 = $r1
+Unit : i13 = 0
+Unit : if i13 >= s0 goto virtualinvoke r5.<A: void sort(int[],int)>(r0, s0)
+Unit : $i10 = r0[i13]
+Unit : $i8 = r5.<A: int x>
+Unit : $i7 = r5.<A: int y>
+Unit : $i9 = $i8 * $i7
+Unit : $i11 = $i10 + $i9
+Unit : r0[i13] = $i11
+Unit : i13 = i13 + 1
+Unit : goto [?= (branch)]
+Unit : virtualinvoke r5.<A: void sort(int[],int)>(r0, s0)
+Unit : $r2 = <java.lang.System: java.io.PrintStream out>
+Unit : $i1 = virtualinvoke r5.<A: int hash(int[],int)>(r0, s0)
+Unit : virtualinvoke $r2.<java.io.PrintStream: void println(int)>($i1)
+Unit : $r3 = new B
+Unit : $i2 = r5.<A: int x>
+Unit : $i5 = $i2 + 1
+Unit : $i3 = r5.<A: int y>
+Unit : $i4 = $i3 + 5
+Unit : specialinvoke $r3.<B: void <init>(int,int)>($i5, $i4)
+Unit : r6 = $r3
+Unit : B_sort_#47_r0 = r0
+Unit : B_sort_#47_i0 = s0
+Unit : B_sort_#47_r1 = r6
+Unit : B_sort_#47_i9 = 0
+Unit : if B_sort_#47_i9 >= B_sort_#47_i0 goto B_sort_#47_i10 = 0
+Unit : B_sort_#47_$i5 = B_sort_#47_i9 % 2
+Unit : if B_sort_#47_$i5 != 1 goto B_sort_#47_i9 = B_sort_#47_i9 + 1
+Unit : B_sort_#47_$i7 = B_sort_#47_r0[B_sort_#47_i9]
+Unit : B_sort_#47_$i6 = B_sort_#47_r1.<B: int y>
+Unit : B_sort_#47_$i8 = B_sort_#47_$i7 + B_sort_#47_$i6
+Unit : B_sort_#47_r0[B_sort_#47_i9] = B_sort_#47_$i8
+Unit : B_sort_#47_i9 = B_sort_#47_i9 + 1
+Unit : goto [?= (branch)]
+Unit : B_sort_#47_i10 = 0
+Unit : if B_sort_#47_i10 >= B_sort_#47_i0 goto (branch)
+Unit : B_sort_#47_i11 = 0
+Unit : if B_sort_#47_i11 >= B_sort_#47_i0 goto B_sort_#47_i10 = B_sort_#47_i10 + 1
+Unit : B_sort_#47_$i2 = B_sort_#47_r0[B_sort_#47_i10]
+Unit : B_sort_#47_$i1 = B_sort_#47_r0[B_sort_#47_i11]
+Unit : if B_sort_#47_$i2 >= B_sort_#47_$i1 goto B_sort_#47_i11 = B_sort_#47_i11 + 1
+Unit : B_sort_#47_i3 = B_sort_#47_r0[B_sort_#47_i10]
+Unit : B_sort_#47_$i4 = B_sort_#47_r0[B_sort_#47_i11]
+Unit : B_sort_#47_r0[B_sort_#47_i10] = B_sort_#47_$i4
+Unit : B_sort_#47_r0[B_sort_#47_i11] = B_sort_#47_i3
+Unit : B_sort_#47_i11 = B_sort_#47_i11 + 1
+Unit : goto [?= (branch)]
+Unit : B_sort_#47_i10 = B_sort_#47_i10 + 1
+Unit : goto [?= (branch)]
+Unit : goto [?= nop]
+Unit : nop
+Unit : $r4 = <java.lang.System: java.io.PrintStream out>
+Unit : B_hash_#48_r0 = r0
+Unit : B_hash_#48_i1 = s0
+Unit : B_hash_#48_r1 = r6
+Unit : B_hash_#48_i4 = 0
+Unit : B_hash_#48_i0 = 100007
+Unit : B_hash_#48_i5 = 1
+Unit : B_hash_#48_i6 = 0
+Unit : if B_hash_#48_i6 >= B_hash_#48_i1 goto B_hash_#48_ret = B_hash_#48_i4
+Unit : B_hash_#48_$i2 = B_hash_#48_r0[B_hash_#48_i6]
+Unit : B_hash_#48_$i3 = B_hash_#48_$i2 * B_hash_#48_i5
+Unit : B_hash_#48_i7 = B_hash_#48_i4 + B_hash_#48_$i3
+Unit : B_hash_#48_i4 = B_hash_#48_i7 % B_hash_#48_i0
+Unit : B_hash_#48_i8 = B_hash_#48_i5 * 37
+Unit : B_hash_#48_i5 = B_hash_#48_i8 % B_hash_#48_i0
+Unit : B_hash_#48_i6 = B_hash_#48_i6 + 1
+Unit : goto [?= (branch)]
+Unit : B_hash_#48_ret = B_hash_#48_i4
+Unit : goto [?= $i6 = B_hash_#48_ret]
+Unit : $i6 = B_hash_#48_ret
+Unit : virtualinvoke $r4.<java.io.PrintStream: void println(int)>($i6)
+Unit : return
+	Valid Locals : [r5, B_hash_#48_r1, r6, $r3, $r1, B_sort_#47_r1]
+All Fields : 
+	 Local : r5 Fields : [x, y]
+	 Field Ref : {x=<A: int x>, y=<A: int y>}
+	 Local : B_hash_#48_r1 Fields : []
+	 Field Ref : {}
+	 Local : r6 Fields : []
+	 Field Ref : {}
+	 Local : $r3 Fields : []
+	 Field Ref : {}
+	 Local : $r2 Fields : []
+	 Field Ref : {}
+	 Local : $r1 Fields : []
+	 Field Ref : {}
+	 Local : $r4 Fields : []
+	 Field Ref : {}
+	 Local : B_sort_#47_r1 Fields : [y]
+	 Field Ref : {y=<B: int y>}
+=====================================================
+Method : <B: int hash(int[],int)>
+Unit : r1 := @this: B
+Unit : r0 := @parameter0: int[]
+Unit : i1 := @parameter1: int
+Unit : i4 = 0
+Unit : i0 = 100007
+Unit : i5 = 1
+Unit : i6 = 0
+Unit : if i6 >= i1 goto return i4
+Unit : $i2 = r0[i6]
+Unit : $i3 = $i2 * i5
+Unit : i7 = i4 + $i3
+Unit : i4 = i7 % i0
+Unit : i8 = i5 * 37
+Unit : i5 = i8 % i0
+Unit : i6 = i6 + 1
+Unit : goto [?= (branch)]
+Unit : return i4
+	Valid Locals : []
+All Fields : 
+	 Local : r1 Fields : []
+	 Field Ref : {}
+=====================================================
+Method : <B: void sort(int[],int)>
+Unit : r1 := @this: B
+Unit : r0 := @parameter0: int[]
+Unit : i0 := @parameter1: int
+Unit : i9 = 0
+Unit : if i9 >= i0 goto i10 = 0
+Unit : $i5 = i9 % 2
+Unit : if $i5 != 1 goto i9 = i9 + 1
+Unit : $i7 = r0[i9]
+Unit : $i6 = r1.<B: int y>
+Unit : $i8 = $i7 + $i6
+Unit : r0[i9] = $i8
+Unit : i9 = i9 + 1
+Unit : goto [?= (branch)]
+Unit : i10 = 0
+Unit : if i10 >= i0 goto return
+Unit : i11 = 0
+Unit : if i11 >= i0 goto i10 = i10 + 1
+Unit : $i2 = r0[i10]
+Unit : $i1 = r0[i11]
+Unit : if $i2 >= $i1 goto i11 = i11 + 1
+Unit : i3 = r0[i10]
+Unit : $i4 = r0[i11]
+Unit : r0[i10] = $i4
+Unit : r0[i11] = i3
+Unit : i11 = i11 + 1
+Unit : goto [?= (branch)]
+Unit : i10 = i10 + 1
+Unit : goto [?= (branch)]
+Unit : return
+	Valid Locals : []
+All Fields : 
+	 Local : r1 Fields : [y]
+	 Field Ref : {y=<B: int y>}
+=====================================================
+Method : <A: void sort(int[],int)>
+Unit : r1 := @this: A
+Unit : r0 := @parameter0: int[]
+Unit : i0 := @parameter1: int
+Unit : i9 = 0
+Unit : if i9 >= i0 goto i10 = 0
+Unit : $i5 = i9 % 2
+Unit : if $i5 != 0 goto i9 = i9 + 1
+Unit : $i7 = r0[i9]
+Unit : $i6 = r1.<A: int x>
+Unit : $i8 = $i7 + $i6
+Unit : r0[i9] = $i8
+Unit : i9 = i9 + 1
+Unit : goto [?= (branch)]
+Unit : i10 = 0
+Unit : if i10 >= i0 goto return
+Unit : i11 = 0
+Unit : if i11 >= i0 goto i10 = i10 + 1
+Unit : $i2 = r0[i10]
+Unit : $i1 = r0[i11]
+Unit : if $i2 >= $i1 goto i11 = i11 + 1
+Unit : i3 = r0[i10]
+Unit : $i4 = r0[i11]
+Unit : r0[i10] = $i4
+Unit : r0[i11] = i3
+Unit : i11 = i11 + 1
+Unit : goto [?= (branch)]
+Unit : i10 = i10 + 1
+Unit : goto [?= (branch)]
+Unit : return
+	Valid Locals : []
+All Fields : 
+	 Local : r1 Fields : [x]
+	 Field Ref : {x=<A: int x>}
+=====================================================
+Method : <A: int hash(int[],int)>
+Unit : r1 := @this: A
+Unit : r0 := @parameter0: int[]
+Unit : i1 := @parameter1: int
+Unit : i4 = 0
+Unit : i0 = 100007
+Unit : i5 = 1
+Unit : i6 = 0
+Unit : if i6 >= i1 goto return i4
+Unit : $i2 = r0[i6]
+Unit : $i3 = $i2 * i5
+Unit : i7 = i4 + $i3
+Unit : i4 = i7 % i0
+Unit : i8 = i5 * 31
+Unit : i5 = i8 % i0
+Unit : i6 = i6 + 1
+Unit : goto [?= (branch)]
+Unit : return i4
+	Valid Locals : []
+All Fields : 
+	 Local : r1 Fields : []
+	 Field Ref : {}
+=====================================================
+Method : <Test: void main(java.lang.String[])>
+Unit : r0 := @parameter0: java.lang.String[]
+Unit : b0 = 100
+Unit : i1 = 0
+Unit : if i1 >= b0 goto return
+Unit : Runner_run_#23_s0 = 1000
+Unit : Runner_run_#23_r0 = newarray (int)[Runner_run_#23_s0]
+Unit : Runner_run_#23_i12 = 0
+Unit : if Runner_run_#23_i12 >= Runner_run_#23_s0 goto Runner_run_#23_$r1 = new A
+Unit : Runner_run_#23_r0[Runner_run_#23_i12] = Runner_run_#23_i12
+Unit : Runner_run_#23_i12 = Runner_run_#23_i12 + 1
+Unit : goto [?= (branch)]
+Unit : Runner_run_#23_$r1 = new A
+Unit : specialinvoke Runner_run_#23_$r1.<A: void <init>(int,int)>(5, 10)
+Unit : Runner_run_#23_r5 = Runner_run_#23_$r1
+Unit : Runner_run_#23_i13 = 0
+Unit : if Runner_run_#23_i13 >= Runner_run_#23_s0 goto virtualinvoke Runner_run_#23_r5.<A: void sort(int[],int)>(Runner_run_#23_r0, Runner_run_#23_s0)
+Unit : Runner_run_#23_$i10 = Runner_run_#23_r0[Runner_run_#23_i13]
+Unit : Runner_run_#23_$i8 = Runner_run_#23_r5.<A: int x>
+Unit : Runner_run_#23_$i7 = Runner_run_#23_r5.<A: int y>
+Unit : Runner_run_#23_$i9 = Runner_run_#23_$i8 * Runner_run_#23_$i7
+Unit : Runner_run_#23_$i11 = Runner_run_#23_$i10 + Runner_run_#23_$i9
+Unit : Runner_run_#23_r0[Runner_run_#23_i13] = Runner_run_#23_$i11
+Unit : Runner_run_#23_i13 = Runner_run_#23_i13 + 1
+Unit : goto [?= (branch)]
+Unit : virtualinvoke Runner_run_#23_r5.<A: void sort(int[],int)>(Runner_run_#23_r0, Runner_run_#23_s0)
+Unit : Runner_run_#23_$r2 = <java.lang.System: java.io.PrintStream out>
+Unit : Runner_run_#23_$i1 = virtualinvoke Runner_run_#23_r5.<A: int hash(int[],int)>(Runner_run_#23_r0, Runner_run_#23_s0)
+Unit : virtualinvoke Runner_run_#23_$r2.<java.io.PrintStream: void println(int)>(Runner_run_#23_$i1)
+Unit : Runner_run_#23_$r3 = new B
+Unit : Runner_run_#23_$i2 = Runner_run_#23_r5.<A: int x>
+Unit : Runner_run_#23_$i5 = Runner_run_#23_$i2 + 1
+Unit : Runner_run_#23_$i3 = Runner_run_#23_r5.<A: int y>
+Unit : Runner_run_#23_$i4 = Runner_run_#23_$i3 + 5
+Unit : specialinvoke Runner_run_#23_$r3.<B: void <init>(int,int)>(Runner_run_#23_$i5, Runner_run_#23_$i4)
+Unit : Runner_run_#23_r6 = Runner_run_#23_$r3
+Unit : Runner_run_#23_B_sort_#47_r0 = Runner_run_#23_r0
+Unit : Runner_run_#23_B_sort_#47_i0 = Runner_run_#23_s0
+Unit : Runner_run_#23_B_sort_#47_r1 = Runner_run_#23_r6
+Unit : Runner_run_#23_B_sort_#47_i9 = 0
+Unit : if Runner_run_#23_B_sort_#47_i9 >= Runner_run_#23_B_sort_#47_i0 goto Runner_run_#23_B_sort_#47_i10 = 0
+Unit : Runner_run_#23_B_sort_#47_$i5 = Runner_run_#23_B_sort_#47_i9 % 2
+Unit : if Runner_run_#23_B_sort_#47_$i5 != 1 goto Runner_run_#23_B_sort_#47_i9 = Runner_run_#23_B_sort_#47_i9 + 1
+Unit : Runner_run_#23_B_sort_#47_$i7 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i9]
+Unit : Runner_run_#23_B_sort_#47_$i6 = Runner_run_#23_B_sort_#47_r1.<B: int y>
+Unit : Runner_run_#23_B_sort_#47_$i8 = Runner_run_#23_B_sort_#47_$i7 + Runner_run_#23_B_sort_#47_$i6
+Unit : Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i9] = Runner_run_#23_B_sort_#47_$i8
+Unit : Runner_run_#23_B_sort_#47_i9 = Runner_run_#23_B_sort_#47_i9 + 1
+Unit : goto [?= (branch)]
+Unit : Runner_run_#23_B_sort_#47_i10 = 0
+Unit : if Runner_run_#23_B_sort_#47_i10 >= Runner_run_#23_B_sort_#47_i0 goto (branch)
+Unit : Runner_run_#23_B_sort_#47_i11 = 0
+Unit : if Runner_run_#23_B_sort_#47_i11 >= Runner_run_#23_B_sort_#47_i0 goto Runner_run_#23_B_sort_#47_i10 = Runner_run_#23_B_sort_#47_i10 + 1
+Unit : Runner_run_#23_B_sort_#47_$i2 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i10]
+Unit : Runner_run_#23_B_sort_#47_$i1 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i11]
+Unit : if Runner_run_#23_B_sort_#47_$i2 >= Runner_run_#23_B_sort_#47_$i1 goto Runner_run_#23_B_sort_#47_i11 = Runner_run_#23_B_sort_#47_i11 + 1
+Unit : Runner_run_#23_B_sort_#47_i3 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i10]
+Unit : Runner_run_#23_B_sort_#47_$i4 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i11]
+Unit : Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i10] = Runner_run_#23_B_sort_#47_$i4
+Unit : Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i11] = Runner_run_#23_B_sort_#47_i3
+Unit : Runner_run_#23_B_sort_#47_i11 = Runner_run_#23_B_sort_#47_i11 + 1
+Unit : goto [?= (branch)]
+Unit : Runner_run_#23_B_sort_#47_i10 = Runner_run_#23_B_sort_#47_i10 + 1
+Unit : goto [?= (branch)]
+Unit : goto [?= nop]
+Unit : nop
+Unit : Runner_run_#23_$r4 = <java.lang.System: java.io.PrintStream out>
+Unit : Runner_run_#23_B_hash_#48_r0 = Runner_run_#23_r0
+Unit : Runner_run_#23_B_hash_#48_i1 = Runner_run_#23_s0
+Unit : Runner_run_#23_B_hash_#48_r1 = Runner_run_#23_r6
+Unit : Runner_run_#23_B_hash_#48_i4 = 0
+Unit : Runner_run_#23_B_hash_#48_i0 = 100007
+Unit : Runner_run_#23_B_hash_#48_i5 = 1
+Unit : Runner_run_#23_B_hash_#48_i6 = 0
+Unit : if Runner_run_#23_B_hash_#48_i6 >= Runner_run_#23_B_hash_#48_i1 goto Runner_run_#23_B_hash_#48_ret = Runner_run_#23_B_hash_#48_i4
+Unit : Runner_run_#23_B_hash_#48_$i2 = Runner_run_#23_B_hash_#48_r0[Runner_run_#23_B_hash_#48_i6]
+Unit : Runner_run_#23_B_hash_#48_$i3 = Runner_run_#23_B_hash_#48_$i2 * Runner_run_#23_B_hash_#48_i5
+Unit : Runner_run_#23_B_hash_#48_i7 = Runner_run_#23_B_hash_#48_i4 + Runner_run_#23_B_hash_#48_$i3
+Unit : Runner_run_#23_B_hash_#48_i4 = Runner_run_#23_B_hash_#48_i7 % Runner_run_#23_B_hash_#48_i0
+Unit : Runner_run_#23_B_hash_#48_i8 = Runner_run_#23_B_hash_#48_i5 * 37
+Unit : Runner_run_#23_B_hash_#48_i5 = Runner_run_#23_B_hash_#48_i8 % Runner_run_#23_B_hash_#48_i0
+Unit : Runner_run_#23_B_hash_#48_i6 = Runner_run_#23_B_hash_#48_i6 + 1
+Unit : goto [?= (branch)]
+Unit : Runner_run_#23_B_hash_#48_ret = Runner_run_#23_B_hash_#48_i4
+Unit : goto [?= Runner_run_#23_$i6 = Runner_run_#23_B_hash_#48_ret]
+Unit : Runner_run_#23_$i6 = Runner_run_#23_B_hash_#48_ret
+Unit : virtualinvoke Runner_run_#23_$r4.<java.io.PrintStream: void println(int)>(Runner_run_#23_$i6)
+Unit : goto [?= nop]
+Unit : nop
+Unit : i1 = i1 + 1
+Unit : goto [?= (branch)]
+Unit : return
+	Valid Locals : [Runner_run_#23_r6, Runner_run_#23_B_hash_#48_r1, Runner_run_#23_$r1, Runner_run_#23_r5, Runner_run_#23_B_sort_#47_r1, Runner_run_#23_$r3]
+All Fields : 
+	 Local : Runner_run_#23_r6 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#23_B_hash_#48_r1 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#23_$r1 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#23_r5 Fields : [x, y]
+	 Field Ref : {x=<A: int x>, y=<A: int y>}
+	 Local : Runner_run_#23_B_sort_#47_r1 Fields : [y]
+	 Field Ref : {y=<B: int y>}
+	 Local : Runner_run_#23_$r4 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#23_$r2 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#23_$r3 Fields : []
+	 Field Ref : {}
+=====================================================
+Method: <Runner: void run()>
+s0 = 1000
+r0 = newarray (int)[s0]
+i12 = 0
+if i12 >= s0 goto $r1 = new A
+r0[i12] = i12
+i12 = i12 + 1
+goto [?= (branch)]
+$r1 = new A
+specialinvoke $r1.<A: void <init>(int,int)>(5, 10)
+r5 = $r1
+r5__y = r5.<A: int y>
+r5__x = r5.<A: int x>
+i13 = 0
+if i13 >= s0 goto virtualinvoke r5.<A: void sort(int[],int)>(r0, s0)
+$i10 = r0[i13]
+$i8 = r5__x
+$i7 = r5__y
+$i9 = $i8 * $i7
+$i11 = $i10 + $i9
+r0[i13] = $i11
+i13 = i13 + 1
+goto [?= (branch)]
+virtualinvoke r5.<A: void sort(int[],int)>(r0, s0)
+$r2 = <java.lang.System: java.io.PrintStream out>
+$i1 = virtualinvoke r5.<A: int hash(int[],int)>(r0, s0)
+virtualinvoke $r2.<java.io.PrintStream: void println(int)>($i1)
+$r3 = new B
+$i2 = r5__x
+$i5 = $i2 + 1
+$i3 = r5__y
+$i4 = $i3 + 5
+specialinvoke $r3.<B: void <init>(int,int)>($i5, $i4)
+r6 = $r3
+B_sort_#47_r0 = r0
+B_sort_#47_i0 = s0
+B_sort_#47_r1 = r6
+B_sort_#47_r1__y = B_sort_#47_r1.<B: int y>
+B_sort_#47_i9 = 0
+if B_sort_#47_i9 >= B_sort_#47_i0 goto B_sort_#47_i10 = 0
+B_sort_#47_$i5 = B_sort_#47_i9 % 2
+if B_sort_#47_$i5 != 1 goto B_sort_#47_i9 = B_sort_#47_i9 + 1
+B_sort_#47_$i7 = B_sort_#47_r0[B_sort_#47_i9]
+B_sort_#47_$i6 = B_sort_#47_r1__y
+B_sort_#47_$i8 = B_sort_#47_$i7 + B_sort_#47_$i6
+B_sort_#47_r0[B_sort_#47_i9] = B_sort_#47_$i8
+B_sort_#47_i9 = B_sort_#47_i9 + 1
+goto [?= (branch)]
+B_sort_#47_i10 = 0
+if B_sort_#47_i10 >= B_sort_#47_i0 goto (branch)
+B_sort_#47_i11 = 0
+if B_sort_#47_i11 >= B_sort_#47_i0 goto B_sort_#47_i10 = B_sort_#47_i10 + 1
+B_sort_#47_$i2 = B_sort_#47_r0[B_sort_#47_i10]
+B_sort_#47_$i1 = B_sort_#47_r0[B_sort_#47_i11]
+if B_sort_#47_$i2 >= B_sort_#47_$i1 goto B_sort_#47_i11 = B_sort_#47_i11 + 1
+B_sort_#47_i3 = B_sort_#47_r0[B_sort_#47_i10]
+B_sort_#47_$i4 = B_sort_#47_r0[B_sort_#47_i11]
+B_sort_#47_r0[B_sort_#47_i10] = B_sort_#47_$i4
+B_sort_#47_r0[B_sort_#47_i11] = B_sort_#47_i3
+B_sort_#47_i11 = B_sort_#47_i11 + 1
+goto [?= (branch)]
+B_sort_#47_i10 = B_sort_#47_i10 + 1
+goto [?= (branch)]
+goto [?= nop]
+nop
+$r4 = <java.lang.System: java.io.PrintStream out>
+B_hash_#48_r0 = r0
+B_hash_#48_i1 = s0
+B_hash_#48_r1 = r6
+B_hash_#48_i4 = 0
+B_hash_#48_i0 = 100007
+B_hash_#48_i5 = 1
+B_hash_#48_i6 = 0
+if B_hash_#48_i6 >= B_hash_#48_i1 goto B_hash_#48_ret = B_hash_#48_i4
+B_hash_#48_$i2 = B_hash_#48_r0[B_hash_#48_i6]
+B_hash_#48_$i3 = B_hash_#48_$i2 * B_hash_#48_i5
+B_hash_#48_i7 = B_hash_#48_i4 + B_hash_#48_$i3
+B_hash_#48_i4 = B_hash_#48_i7 % B_hash_#48_i0
+B_hash_#48_i8 = B_hash_#48_i5 * 37
+B_hash_#48_i5 = B_hash_#48_i8 % B_hash_#48_i0
+B_hash_#48_i6 = B_hash_#48_i6 + 1
+goto [?= (branch)]
+B_hash_#48_ret = B_hash_#48_i4
+goto [?= $i6 = B_hash_#48_ret]
+$i6 = B_hash_#48_ret
+virtualinvoke $r4.<java.io.PrintStream: void println(int)>($i6)
+return
+=====================================================
+Method: <B: int hash(int[],int)>
+r1 := @this: B
+r0 := @parameter0: int[]
+i1 := @parameter1: int
+i4 = 0
+i0 = 100007
+i5 = 1
+i6 = 0
+if i6 >= i1 goto return i4
+$i2 = r0[i6]
+$i3 = $i2 * i5
+i7 = i4 + $i3
+i4 = i7 % i0
+i8 = i5 * 37
+i5 = i8 % i0
+i6 = i6 + 1
+goto [?= (branch)]
+return i4
+=====================================================
+Method: <B: void sort(int[],int)>
+r1 := @this: B
+r0 := @parameter0: int[]
+i0 := @parameter1: int
+i9 = 0
+if i9 >= i0 goto i10 = 0
+$i5 = i9 % 2
+if $i5 != 1 goto i9 = i9 + 1
+$i7 = r0[i9]
+$i6 = r1.<B: int y>
+$i8 = $i7 + $i6
+r0[i9] = $i8
+i9 = i9 + 1
+goto [?= (branch)]
+i10 = 0
+if i10 >= i0 goto return
+i11 = 0
+if i11 >= i0 goto i10 = i10 + 1
+$i2 = r0[i10]
+$i1 = r0[i11]
+if $i2 >= $i1 goto i11 = i11 + 1
+i3 = r0[i10]
+$i4 = r0[i11]
+r0[i10] = $i4
+r0[i11] = i3
+i11 = i11 + 1
+goto [?= (branch)]
+i10 = i10 + 1
+goto [?= (branch)]
+return
+=====================================================
+Method: <A: void sort(int[],int)>
+r1 := @this: A
+r0 := @parameter0: int[]
+i0 := @parameter1: int
+i9 = 0
+if i9 >= i0 goto i10 = 0
+$i5 = i9 % 2
+if $i5 != 0 goto i9 = i9 + 1
+$i7 = r0[i9]
+$i6 = r1.<A: int x>
+$i8 = $i7 + $i6
+r0[i9] = $i8
+i9 = i9 + 1
+goto [?= (branch)]
+i10 = 0
+if i10 >= i0 goto return
+i11 = 0
+if i11 >= i0 goto i10 = i10 + 1
+$i2 = r0[i10]
+$i1 = r0[i11]
+if $i2 >= $i1 goto i11 = i11 + 1
+i3 = r0[i10]
+$i4 = r0[i11]
+r0[i10] = $i4
+r0[i11] = i3
+i11 = i11 + 1
+goto [?= (branch)]
+i10 = i10 + 1
+goto [?= (branch)]
+return
+=====================================================
+Method: <A: int hash(int[],int)>
+r1 := @this: A
+r0 := @parameter0: int[]
+i1 := @parameter1: int
+i4 = 0
+i0 = 100007
+i5 = 1
+i6 = 0
+if i6 >= i1 goto return i4
+$i2 = r0[i6]
+$i3 = $i2 * i5
+i7 = i4 + $i3
+i4 = i7 % i0
+i8 = i5 * 31
+i5 = i8 % i0
+i6 = i6 + 1
+goto [?= (branch)]
+return i4
+=====================================================
+Method: <Test: void main(java.lang.String[])>
+r0 := @parameter0: java.lang.String[]
+b0 = 100
+i1 = 0
+if i1 >= b0 goto return
+Runner_run_#23_s0 = 1000
+Runner_run_#23_r0 = newarray (int)[Runner_run_#23_s0]
+Runner_run_#23_i12 = 0
+if Runner_run_#23_i12 >= Runner_run_#23_s0 goto Runner_run_#23_$r1 = new A
+Runner_run_#23_r0[Runner_run_#23_i12] = Runner_run_#23_i12
+Runner_run_#23_i12 = Runner_run_#23_i12 + 1
+goto [?= (branch)]
+Runner_run_#23_$r1 = new A
+specialinvoke Runner_run_#23_$r1.<A: void <init>(int,int)>(5, 10)
+Runner_run_#23_r5 = Runner_run_#23_$r1
+Runner_run_#23_r5__y = Runner_run_#23_r5.<A: int y>
+Runner_run_#23_r5__x = Runner_run_#23_r5.<A: int x>
+Runner_run_#23_i13 = 0
+if Runner_run_#23_i13 >= Runner_run_#23_s0 goto virtualinvoke Runner_run_#23_r5.<A: void sort(int[],int)>(Runner_run_#23_r0, Runner_run_#23_s0)
+Runner_run_#23_$i10 = Runner_run_#23_r0[Runner_run_#23_i13]
+Runner_run_#23_$i8 = Runner_run_#23_r5__x
+Runner_run_#23_$i7 = Runner_run_#23_r5__y
+Runner_run_#23_$i9 = Runner_run_#23_$i8 * Runner_run_#23_$i7
+Runner_run_#23_$i11 = Runner_run_#23_$i10 + Runner_run_#23_$i9
+Runner_run_#23_r0[Runner_run_#23_i13] = Runner_run_#23_$i11
+Runner_run_#23_i13 = Runner_run_#23_i13 + 1
+goto [?= (branch)]
+virtualinvoke Runner_run_#23_r5.<A: void sort(int[],int)>(Runner_run_#23_r0, Runner_run_#23_s0)
+Runner_run_#23_$r2 = <java.lang.System: java.io.PrintStream out>
+Runner_run_#23_$i1 = virtualinvoke Runner_run_#23_r5.<A: int hash(int[],int)>(Runner_run_#23_r0, Runner_run_#23_s0)
+virtualinvoke Runner_run_#23_$r2.<java.io.PrintStream: void println(int)>(Runner_run_#23_$i1)
+Runner_run_#23_$r3 = new B
+Runner_run_#23_$i2 = Runner_run_#23_r5__x
+Runner_run_#23_$i5 = Runner_run_#23_$i2 + 1
+Runner_run_#23_$i3 = Runner_run_#23_r5__y
+Runner_run_#23_$i4 = Runner_run_#23_$i3 + 5
+specialinvoke Runner_run_#23_$r3.<B: void <init>(int,int)>(Runner_run_#23_$i5, Runner_run_#23_$i4)
+Runner_run_#23_r6 = Runner_run_#23_$r3
+Runner_run_#23_B_sort_#47_r0 = Runner_run_#23_r0
+Runner_run_#23_B_sort_#47_i0 = Runner_run_#23_s0
+Runner_run_#23_B_sort_#47_r1 = Runner_run_#23_r6
+Runner_run_#23_B_sort_#47_r1__y = Runner_run_#23_B_sort_#47_r1.<B: int y>
+Runner_run_#23_B_sort_#47_i9 = 0
+if Runner_run_#23_B_sort_#47_i9 >= Runner_run_#23_B_sort_#47_i0 goto Runner_run_#23_B_sort_#47_i10 = 0
+Runner_run_#23_B_sort_#47_$i5 = Runner_run_#23_B_sort_#47_i9 % 2
+if Runner_run_#23_B_sort_#47_$i5 != 1 goto Runner_run_#23_B_sort_#47_i9 = Runner_run_#23_B_sort_#47_i9 + 1
+Runner_run_#23_B_sort_#47_$i7 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i9]
+Runner_run_#23_B_sort_#47_$i6 = Runner_run_#23_B_sort_#47_r1__y
+Runner_run_#23_B_sort_#47_$i8 = Runner_run_#23_B_sort_#47_$i7 + Runner_run_#23_B_sort_#47_$i6
+Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i9] = Runner_run_#23_B_sort_#47_$i8
+Runner_run_#23_B_sort_#47_i9 = Runner_run_#23_B_sort_#47_i9 + 1
+goto [?= (branch)]
+Runner_run_#23_B_sort_#47_i10 = 0
+if Runner_run_#23_B_sort_#47_i10 >= Runner_run_#23_B_sort_#47_i0 goto (branch)
+Runner_run_#23_B_sort_#47_i11 = 0
+if Runner_run_#23_B_sort_#47_i11 >= Runner_run_#23_B_sort_#47_i0 goto Runner_run_#23_B_sort_#47_i10 = Runner_run_#23_B_sort_#47_i10 + 1
+Runner_run_#23_B_sort_#47_$i2 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i10]
+Runner_run_#23_B_sort_#47_$i1 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i11]
+if Runner_run_#23_B_sort_#47_$i2 >= Runner_run_#23_B_sort_#47_$i1 goto Runner_run_#23_B_sort_#47_i11 = Runner_run_#23_B_sort_#47_i11 + 1
+Runner_run_#23_B_sort_#47_i3 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i10]
+Runner_run_#23_B_sort_#47_$i4 = Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i11]
+Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i10] = Runner_run_#23_B_sort_#47_$i4
+Runner_run_#23_B_sort_#47_r0[Runner_run_#23_B_sort_#47_i11] = Runner_run_#23_B_sort_#47_i3
+Runner_run_#23_B_sort_#47_i11 = Runner_run_#23_B_sort_#47_i11 + 1
+goto [?= (branch)]
+Runner_run_#23_B_sort_#47_i10 = Runner_run_#23_B_sort_#47_i10 + 1
+goto [?= (branch)]
+goto [?= nop]
+nop
+Runner_run_#23_$r4 = <java.lang.System: java.io.PrintStream out>
+Runner_run_#23_B_hash_#48_r0 = Runner_run_#23_r0
+Runner_run_#23_B_hash_#48_i1 = Runner_run_#23_s0
+Runner_run_#23_B_hash_#48_r1 = Runner_run_#23_r6
+Runner_run_#23_B_hash_#48_i4 = 0
+Runner_run_#23_B_hash_#48_i0 = 100007
+Runner_run_#23_B_hash_#48_i5 = 1
+Runner_run_#23_B_hash_#48_i6 = 0
+if Runner_run_#23_B_hash_#48_i6 >= Runner_run_#23_B_hash_#48_i1 goto Runner_run_#23_B_hash_#48_ret = Runner_run_#23_B_hash_#48_i4
+Runner_run_#23_B_hash_#48_$i2 = Runner_run_#23_B_hash_#48_r0[Runner_run_#23_B_hash_#48_i6]
+Runner_run_#23_B_hash_#48_$i3 = Runner_run_#23_B_hash_#48_$i2 * Runner_run_#23_B_hash_#48_i5
+Runner_run_#23_B_hash_#48_i7 = Runner_run_#23_B_hash_#48_i4 + Runner_run_#23_B_hash_#48_$i3
+Runner_run_#23_B_hash_#48_i4 = Runner_run_#23_B_hash_#48_i7 % Runner_run_#23_B_hash_#48_i0
+Runner_run_#23_B_hash_#48_i8 = Runner_run_#23_B_hash_#48_i5 * 37
+Runner_run_#23_B_hash_#48_i5 = Runner_run_#23_B_hash_#48_i8 % Runner_run_#23_B_hash_#48_i0
+Runner_run_#23_B_hash_#48_i6 = Runner_run_#23_B_hash_#48_i6 + 1
+goto [?= (branch)]
+Runner_run_#23_B_hash_#48_ret = Runner_run_#23_B_hash_#48_i4
+goto [?= Runner_run_#23_$i6 = Runner_run_#23_B_hash_#48_ret]
+Runner_run_#23_$i6 = Runner_run_#23_B_hash_#48_ret
+virtualinvoke Runner_run_#23_$r4.<java.io.PrintStream: void println(int)>(Runner_run_#23_$i6)
+goto [?= nop]
+nop
+i1 = i1 + 1
+goto [?= (branch)]
+return
+Soot finished on Tue Apr 30 21:58:28 IST 2024
+Soot has run for 0 min. 34 sec.

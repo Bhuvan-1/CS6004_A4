@@ -1,0 +1,264 @@
+Soot started on Tue Apr 30 22:01:10 IST 2024
+=====================================================
+Method : <Runner: Node make_special(int)>
+Unit : i0 := @parameter0: int
+Unit : $r0 = new Node
+Unit : specialinvoke $r0.<Node: void <init>()>()
+Unit : r1 = $r0
+Unit : $r2 = new Node
+Unit : specialinvoke $r2.<Node: void <init>(int)>(i0)
+Unit : r3 = $r2
+Unit : $i1 = r3.<Node: int x>
+Unit : r1.<Node: int x> = $i1
+Unit : i9 = 0
+Unit : if i9 >= i0 goto return r1
+Unit : $i2 = r1.<Node: int x>
+Unit : Runner_poly_#53_i0 = i9
+Unit : Runner_poly_#53_$i2 = Runner_poly_#53_i0 * Runner_poly_#53_i0
+Unit : Runner_poly_#53_$i1 = 3 * Runner_poly_#53_i0
+Unit : Runner_poly_#53_$i3 = Runner_poly_#53_$i2 + Runner_poly_#53_$i1
+Unit : Runner_poly_#53_$i4 = Runner_poly_#53_$i3 + 7
+Unit : Runner_poly_#53_ret = Runner_poly_#53_$i4
+Unit : goto [?= $i3 = Runner_poly_#53_ret]
+Unit : $i3 = Runner_poly_#53_ret
+Unit : $i4 = r3.<Node: int x>
+Unit : $i5 = $i3 * $i4
+Unit : $i6 = $i2 + $i5
+Unit : r1.<Node: int x> = $i6
+Unit : $i7 = r1.<Node: int x>
+Unit : $i8 = $i7 % 1000000007
+Unit : r1.<Node: int x> = $i8
+Unit : i9 = i9 + 1
+Unit : goto [?= (branch)]
+Unit : return r1
+	Valid Locals : [r3, $r0, r1, $r2]
+All Fields : 
+	 Local : r3 Fields : [x]
+	 Field Ref : {x=<Node: int x>}
+	 Local : $r0 Fields : []
+	 Field Ref : {}
+	 Local : r1 Fields : [x]
+	 Field Ref : {x=<Node: int x>}
+	 Local : $r2 Fields : []
+	 Field Ref : {}
+=====================================================
+Method : <Test: void main(java.lang.String[])>
+Unit : r0 := @parameter0: java.lang.String[]
+Unit : b0 = 100
+Unit : i1 = 0
+Unit : if i1 >= b0 goto return
+Unit : Runner_run_#32_i1 = 0
+Unit : if Runner_run_#32_i1 >= 100 goto (branch)
+Unit : Runner_run_#32_$r0 = new Node
+Unit : specialinvoke Runner_run_#32_$r0.<Node: void <init>()>()
+Unit : Runner_run_#32_r2 = Runner_run_#32_$r0
+Unit : Runner_run_#32_r3 = staticinvoke <Runner: Node make_special(int)>(Runner_run_#32_i1)
+Unit : Runner_run_#32_$r1 = <java.lang.System: java.io.PrintStream out>
+Unit : Runner_run_#32_$i0 = Runner_run_#32_r3.<Node: int x>
+Unit : virtualinvoke Runner_run_#32_$r1.<java.io.PrintStream: void println(int)>(Runner_run_#32_$i0)
+Unit : Runner_run_#32_i1 = Runner_run_#32_i1 + 1
+Unit : goto [?= (branch)]
+Unit : goto [?= nop]
+Unit : nop
+Unit : i1 = i1 + 1
+Unit : goto [?= (branch)]
+Unit : return
+	Valid Locals : [Runner_run_#32_r2, Runner_run_#32_$r0, Runner_run_#32_r3]
+All Fields : 
+	 Local : Runner_run_#32_r2 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#32_$r0 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#32_$r1 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#32_r3 Fields : [x]
+	 Field Ref : {x=<Node: int x>}
+=====================================================
+Method : <Runner: int poly(int)>
+Unit : i0 := @parameter0: int
+Unit : $i2 = i0 * i0
+Unit : $i1 = 3 * i0
+Unit : $i3 = $i2 + $i1
+Unit : $i4 = $i3 + 7
+Unit : return $i4
+	Valid Locals : []
+All Fields : 
+=====================================================
+Method : <Runner: void run()>
+Unit : i1 = 0
+Unit : if i1 >= 100 goto return
+Unit : $r0 = new Node
+Unit : specialinvoke $r0.<Node: void <init>()>()
+Unit : r2 = $r0
+Unit : Runner_make_special_#42_i0 = i1
+Unit : Runner_make_special_#42_$r0 = new Node
+Unit : specialinvoke Runner_make_special_#42_$r0.<Node: void <init>()>()
+Unit : Runner_make_special_#42_r1 = Runner_make_special_#42_$r0
+Unit : Runner_make_special_#42_$r2 = new Node
+Unit : specialinvoke Runner_make_special_#42_$r2.<Node: void <init>(int)>(Runner_make_special_#42_i0)
+Unit : Runner_make_special_#42_r3 = Runner_make_special_#42_$r2
+Unit : Runner_make_special_#42_$i1 = Runner_make_special_#42_r3.<Node: int x>
+Unit : Runner_make_special_#42_r1.<Node: int x> = Runner_make_special_#42_$i1
+Unit : Runner_make_special_#42_i9 = 0
+Unit : if Runner_make_special_#42_i9 >= Runner_make_special_#42_i0 goto Runner_make_special_#42_ret = Runner_make_special_#42_r1
+Unit : Runner_make_special_#42_$i2 = Runner_make_special_#42_r1.<Node: int x>
+Unit : Runner_make_special_#42_Runner_poly_#53_i0 = Runner_make_special_#42_i9
+Unit : Runner_make_special_#42_Runner_poly_#53_$i2 = Runner_make_special_#42_Runner_poly_#53_i0 * Runner_make_special_#42_Runner_poly_#53_i0
+Unit : Runner_make_special_#42_Runner_poly_#53_$i1 = 3 * Runner_make_special_#42_Runner_poly_#53_i0
+Unit : Runner_make_special_#42_Runner_poly_#53_$i3 = Runner_make_special_#42_Runner_poly_#53_$i2 + Runner_make_special_#42_Runner_poly_#53_$i1
+Unit : Runner_make_special_#42_Runner_poly_#53_$i4 = Runner_make_special_#42_Runner_poly_#53_$i3 + 7
+Unit : Runner_make_special_#42_Runner_poly_#53_ret = Runner_make_special_#42_Runner_poly_#53_$i4
+Unit : goto [?= Runner_make_special_#42_$i3 = Runner_make_special_#42_Runner_poly_#53_ret]
+Unit : Runner_make_special_#42_$i3 = Runner_make_special_#42_Runner_poly_#53_ret
+Unit : Runner_make_special_#42_$i4 = Runner_make_special_#42_r3.<Node: int x>
+Unit : Runner_make_special_#42_$i5 = Runner_make_special_#42_$i3 * Runner_make_special_#42_$i4
+Unit : Runner_make_special_#42_$i6 = Runner_make_special_#42_$i2 + Runner_make_special_#42_$i5
+Unit : Runner_make_special_#42_r1.<Node: int x> = Runner_make_special_#42_$i6
+Unit : Runner_make_special_#42_$i7 = Runner_make_special_#42_r1.<Node: int x>
+Unit : Runner_make_special_#42_$i8 = Runner_make_special_#42_$i7 % 1000000007
+Unit : Runner_make_special_#42_r1.<Node: int x> = Runner_make_special_#42_$i8
+Unit : Runner_make_special_#42_i9 = Runner_make_special_#42_i9 + 1
+Unit : goto [?= (branch)]
+Unit : Runner_make_special_#42_ret = Runner_make_special_#42_r1
+Unit : goto [?= r3 = Runner_make_special_#42_ret]
+Unit : r3 = Runner_make_special_#42_ret
+Unit : $r1 = <java.lang.System: java.io.PrintStream out>
+Unit : $i0 = r3.<Node: int x>
+Unit : virtualinvoke $r1.<java.io.PrintStream: void println(int)>($i0)
+Unit : i1 = i1 + 1
+Unit : goto [?= (branch)]
+Unit : return
+	Valid Locals : [r2, Runner_make_special_#42_ret, Runner_make_special_#42_$r0, Runner_make_special_#42_r1, Runner_make_special_#42_$r2, Runner_make_special_#42_r3, $r0, r3]
+All Fields : 
+	 Local : r2 Fields : []
+	 Field Ref : {}
+	 Local : Runner_make_special_#42_ret Fields : []
+	 Field Ref : {}
+	 Local : Runner_make_special_#42_$r0 Fields : []
+	 Field Ref : {}
+	 Local : Runner_make_special_#42_r1 Fields : [x]
+	 Field Ref : {x=<Node: int x>}
+	 Local : Runner_make_special_#42_$r2 Fields : []
+	 Field Ref : {}
+	 Local : Runner_make_special_#42_r3 Fields : [x]
+	 Field Ref : {x=<Node: int x>}
+	 Local : $r0 Fields : []
+	 Field Ref : {}
+	 Local : r3 Fields : [x]
+	 Field Ref : {x=<Node: int x>}
+	 Local : $r1 Fields : []
+	 Field Ref : {}
+=====================================================
+Method: <Runner: Node make_special(int)>
+i0 := @parameter0: int
+$r0 = new Node
+specialinvoke $r0.<Node: void <init>()>()
+r1 = $r0
+$r2 = new Node
+specialinvoke $r2.<Node: void <init>(int)>(i0)
+r3 = $r2
+r3__x = r3.<Node: int x>
+$i1 = r3__x
+r1__x = $i1
+i9 = 0
+if i9 >= i0 goto r1.<Node: int x> = r1__x
+$i2 = r1__x
+Runner_poly_#53_i0 = i9
+Runner_poly_#53_$i2 = Runner_poly_#53_i0 * Runner_poly_#53_i0
+Runner_poly_#53_$i1 = 3 * Runner_poly_#53_i0
+Runner_poly_#53_$i3 = Runner_poly_#53_$i2 + Runner_poly_#53_$i1
+Runner_poly_#53_$i4 = Runner_poly_#53_$i3 + 7
+Runner_poly_#53_ret = Runner_poly_#53_$i4
+goto [?= $i3 = Runner_poly_#53_ret]
+$i3 = Runner_poly_#53_ret
+$i4 = r3__x
+$i5 = $i3 * $i4
+$i6 = $i2 + $i5
+r1__x = $i6
+$i7 = r1__x
+$i8 = $i7 % 1000000007
+r1__x = $i8
+i9 = i9 + 1
+goto [?= (branch)]
+r1.<Node: int x> = r1__x
+return r1
+=====================================================
+Method: <Test: void main(java.lang.String[])>
+r0 := @parameter0: java.lang.String[]
+b0 = 100
+i1 = 0
+if i1 >= b0 goto return
+Runner_run_#32_i1 = 0
+if Runner_run_#32_i1 >= 100 goto (branch)
+Runner_run_#32_$r0 = new Node
+specialinvoke Runner_run_#32_$r0.<Node: void <init>()>()
+Runner_run_#32_r2 = Runner_run_#32_$r0
+Runner_run_#32_r3 = staticinvoke <Runner: Node make_special(int)>(Runner_run_#32_i1)
+Runner_run_#32_r3__x = Runner_run_#32_r3.<Node: int x>
+Runner_run_#32_$r1 = <java.lang.System: java.io.PrintStream out>
+Runner_run_#32_$i0 = Runner_run_#32_r3__x
+virtualinvoke Runner_run_#32_$r1.<java.io.PrintStream: void println(int)>(Runner_run_#32_$i0)
+Runner_run_#32_i1 = Runner_run_#32_i1 + 1
+goto [?= (branch)]
+goto [?= nop]
+nop
+i1 = i1 + 1
+goto [?= (branch)]
+return
+=====================================================
+Method: <Runner: int poly(int)>
+i0 := @parameter0: int
+$i2 = i0 * i0
+$i1 = 3 * i0
+$i3 = $i2 + $i1
+$i4 = $i3 + 7
+return $i4
+=====================================================
+Method: <Runner: void run()>
+i1 = 0
+if i1 >= 100 goto return
+$r0 = new Node
+specialinvoke $r0.<Node: void <init>()>()
+r2 = $r0
+Runner_make_special_#42_i0 = i1
+Runner_make_special_#42_$r0 = new Node
+specialinvoke Runner_make_special_#42_$r0.<Node: void <init>()>()
+Runner_make_special_#42_r1 = Runner_make_special_#42_$r0
+Runner_make_special_#42_$r2 = new Node
+specialinvoke Runner_make_special_#42_$r2.<Node: void <init>(int)>(Runner_make_special_#42_i0)
+Runner_make_special_#42_r3 = Runner_make_special_#42_$r2
+Runner_make_special_#42_r3__x = Runner_make_special_#42_r3.<Node: int x>
+Runner_make_special_#42_$i1 = Runner_make_special_#42_r3__x
+Runner_make_special_#42_r1__x = Runner_make_special_#42_$i1
+Runner_make_special_#42_i9 = 0
+if Runner_make_special_#42_i9 >= Runner_make_special_#42_i0 goto Runner_make_special_#42_ret = Runner_make_special_#42_r1
+Runner_make_special_#42_$i2 = Runner_make_special_#42_r1__x
+Runner_make_special_#42_Runner_poly_#53_i0 = Runner_make_special_#42_i9
+Runner_make_special_#42_Runner_poly_#53_$i2 = Runner_make_special_#42_Runner_poly_#53_i0 * Runner_make_special_#42_Runner_poly_#53_i0
+Runner_make_special_#42_Runner_poly_#53_$i1 = 3 * Runner_make_special_#42_Runner_poly_#53_i0
+Runner_make_special_#42_Runner_poly_#53_$i3 = Runner_make_special_#42_Runner_poly_#53_$i2 + Runner_make_special_#42_Runner_poly_#53_$i1
+Runner_make_special_#42_Runner_poly_#53_$i4 = Runner_make_special_#42_Runner_poly_#53_$i3 + 7
+Runner_make_special_#42_Runner_poly_#53_ret = Runner_make_special_#42_Runner_poly_#53_$i4
+goto [?= Runner_make_special_#42_$i3 = Runner_make_special_#42_Runner_poly_#53_ret]
+Runner_make_special_#42_$i3 = Runner_make_special_#42_Runner_poly_#53_ret
+Runner_make_special_#42_$i4 = Runner_make_special_#42_r3__x
+Runner_make_special_#42_$i5 = Runner_make_special_#42_$i3 * Runner_make_special_#42_$i4
+Runner_make_special_#42_$i6 = Runner_make_special_#42_$i2 + Runner_make_special_#42_$i5
+Runner_make_special_#42_r1__x = Runner_make_special_#42_$i6
+Runner_make_special_#42_$i7 = Runner_make_special_#42_r1__x
+Runner_make_special_#42_$i8 = Runner_make_special_#42_$i7 % 1000000007
+Runner_make_special_#42_r1__x = Runner_make_special_#42_$i8
+Runner_make_special_#42_i9 = Runner_make_special_#42_i9 + 1
+goto [?= (branch)]
+Runner_make_special_#42_ret = Runner_make_special_#42_r1
+goto [?= r3 = Runner_make_special_#42_ret]
+r3 = Runner_make_special_#42_ret
+r3__x = r3.<Node: int x>
+$r1 = <java.lang.System: java.io.PrintStream out>
+$i0 = r3__x
+virtualinvoke $r1.<java.io.PrintStream: void println(int)>($i0)
+i1 = i1 + 1
+goto [?= (branch)]
+return
+Soot finished on Tue Apr 30 22:01:42 IST 2024
+Soot has run for 0 min. 32 sec.

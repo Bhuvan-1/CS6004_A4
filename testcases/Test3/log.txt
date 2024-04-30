@@ -1,0 +1,173 @@
+Soot started on Tue Apr 30 22:02:53 IST 2024
+Clash in field access : 23 Locals : [B_getX_#27_r0, B_getY_#27_r0]
+Clash in field access : 9999 Locals : [Runner_run_#13_B_getY_#27_r0, Runner_run_#13_B_getX_#27_r0]
+=====================================================
+Method : <Runner: void run()>
+Unit : $r0 = new B
+Unit : specialinvoke $r0.<B: void <init>(int,int)>(3, 4)
+Unit : r1 = $r0
+Unit : i3 = 0
+Unit : i4 = 0
+Unit : if i4 >= 1000 goto $r2 = <java.lang.System: java.io.PrintStream out>
+Unit : B_getX_#27_r0 = r1
+Unit : B_getX_#27_$i0 = B_getX_#27_r0.<B: int x>
+Unit : B_getX_#27_ret = B_getX_#27_$i0
+Unit : goto [?= $i0 = B_getX_#27_ret]
+Unit : $i0 = B_getX_#27_ret
+Unit : B_getY_#27_r0 = r1
+Unit : B_getY_#27_$i0 = B_getY_#27_r0.<B: int y>
+Unit : B_getY_#27_ret = B_getY_#27_$i0
+Unit : goto [?= $i1 = B_getY_#27_ret]
+Unit : $i1 = B_getY_#27_ret
+Unit : $i2 = $i0 + $i1
+Unit : i3 = i3 + $i2
+Unit : i4 = i4 + 1
+Unit : goto [?= (branch)]
+Unit : $r2 = <java.lang.System: java.io.PrintStream out>
+Unit : virtualinvoke $r2.<java.io.PrintStream: void println(int)>(i3)
+Unit : return
+	Valid Locals : []
+All Fields : 
+	 Local : $r2 Fields : []
+	 Field Ref : {}
+	 Local : $r0 Fields : []
+	 Field Ref : {}
+	 Local : B_getX_#27_r0 Fields : [x]
+	 Field Ref : {x=<B: int x>}
+	 Local : B_getY_#27_r0 Fields : [y]
+	 Field Ref : {y=<B: int y>}
+	 Local : r1 Fields : []
+	 Field Ref : {}
+=====================================================
+Method : <B: int getX()>
+Unit : r0 := @this: B
+Unit : $i0 = r0.<B: int x>
+Unit : return $i0
+	Valid Locals : []
+All Fields : 
+	 Local : r0 Fields : [x]
+	 Field Ref : {x=<B: int x>}
+=====================================================
+Method : <B: int getY()>
+Unit : r0 := @this: B
+Unit : $i0 = r0.<B: int y>
+Unit : return $i0
+	Valid Locals : []
+All Fields : 
+	 Local : r0 Fields : [y]
+	 Field Ref : {y=<B: int y>}
+=====================================================
+Method : <Test: void main(java.lang.String[])>
+Unit : r0 := @parameter0: java.lang.String[]
+Unit : s0 = 1000
+Unit : i1 = 0
+Unit : if i1 >= s0 goto return
+Unit : Runner_run_#13_$r0 = new B
+Unit : specialinvoke Runner_run_#13_$r0.<B: void <init>(int,int)>(3, 4)
+Unit : Runner_run_#13_r1 = Runner_run_#13_$r0
+Unit : Runner_run_#13_i3 = 0
+Unit : Runner_run_#13_i4 = 0
+Unit : if Runner_run_#13_i4 >= 1000 goto Runner_run_#13_$r2 = <java.lang.System: java.io.PrintStream out>
+Unit : Runner_run_#13_B_getX_#27_r0 = Runner_run_#13_r1
+Unit : Runner_run_#13_B_getX_#27_$i0 = Runner_run_#13_B_getX_#27_r0.<B: int x>
+Unit : Runner_run_#13_B_getX_#27_ret = Runner_run_#13_B_getX_#27_$i0
+Unit : goto [?= Runner_run_#13_$i0 = Runner_run_#13_B_getX_#27_ret]
+Unit : Runner_run_#13_$i0 = Runner_run_#13_B_getX_#27_ret
+Unit : Runner_run_#13_B_getY_#27_r0 = Runner_run_#13_r1
+Unit : Runner_run_#13_B_getY_#27_$i0 = Runner_run_#13_B_getY_#27_r0.<B: int y>
+Unit : Runner_run_#13_B_getY_#27_ret = Runner_run_#13_B_getY_#27_$i0
+Unit : goto [?= Runner_run_#13_$i1 = Runner_run_#13_B_getY_#27_ret]
+Unit : Runner_run_#13_$i1 = Runner_run_#13_B_getY_#27_ret
+Unit : Runner_run_#13_$i2 = Runner_run_#13_$i0 + Runner_run_#13_$i1
+Unit : Runner_run_#13_i3 = Runner_run_#13_i3 + Runner_run_#13_$i2
+Unit : Runner_run_#13_i4 = Runner_run_#13_i4 + 1
+Unit : goto [?= (branch)]
+Unit : Runner_run_#13_$r2 = <java.lang.System: java.io.PrintStream out>
+Unit : virtualinvoke Runner_run_#13_$r2.<java.io.PrintStream: void println(int)>(Runner_run_#13_i3)
+Unit : goto [?= nop]
+Unit : nop
+Unit : i1 = i1 + 1
+Unit : goto [?= (branch)]
+Unit : return
+	Valid Locals : []
+All Fields : 
+	 Local : Runner_run_#13_r1 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#13_B_getY_#27_r0 Fields : [y]
+	 Field Ref : {y=<B: int y>}
+	 Local : Runner_run_#13_B_getX_#27_r0 Fields : [x]
+	 Field Ref : {x=<B: int x>}
+	 Local : Runner_run_#13_$r2 Fields : []
+	 Field Ref : {}
+	 Local : Runner_run_#13_$r0 Fields : []
+	 Field Ref : {}
+=====================================================
+Method: <Runner: void run()>
+$r0 = new B
+specialinvoke $r0.<B: void <init>(int,int)>(3, 4)
+r1 = $r0
+i3 = 0
+i4 = 0
+if i4 >= 1000 goto $r2 = <java.lang.System: java.io.PrintStream out>
+B_getX_#27_r0 = r1
+B_getX_#27_$i0 = B_getX_#27_r0.<B: int x>
+B_getX_#27_ret = B_getX_#27_$i0
+goto [?= $i0 = B_getX_#27_ret]
+$i0 = B_getX_#27_ret
+B_getY_#27_r0 = r1
+B_getY_#27_$i0 = B_getY_#27_r0.<B: int y>
+B_getY_#27_ret = B_getY_#27_$i0
+goto [?= $i1 = B_getY_#27_ret]
+$i1 = B_getY_#27_ret
+$i2 = $i0 + $i1
+i3 = i3 + $i2
+i4 = i4 + 1
+goto [?= (branch)]
+$r2 = <java.lang.System: java.io.PrintStream out>
+virtualinvoke $r2.<java.io.PrintStream: void println(int)>(i3)
+return
+=====================================================
+Method: <B: int getX()>
+r0 := @this: B
+$i0 = r0.<B: int x>
+return $i0
+=====================================================
+Method: <B: int getY()>
+r0 := @this: B
+$i0 = r0.<B: int y>
+return $i0
+=====================================================
+Method: <Test: void main(java.lang.String[])>
+r0 := @parameter0: java.lang.String[]
+s0 = 1000
+i1 = 0
+if i1 >= s0 goto return
+Runner_run_#13_$r0 = new B
+specialinvoke Runner_run_#13_$r0.<B: void <init>(int,int)>(3, 4)
+Runner_run_#13_r1 = Runner_run_#13_$r0
+Runner_run_#13_i3 = 0
+Runner_run_#13_i4 = 0
+if Runner_run_#13_i4 >= 1000 goto Runner_run_#13_$r2 = <java.lang.System: java.io.PrintStream out>
+Runner_run_#13_B_getX_#27_r0 = Runner_run_#13_r1
+Runner_run_#13_B_getX_#27_$i0 = Runner_run_#13_B_getX_#27_r0.<B: int x>
+Runner_run_#13_B_getX_#27_ret = Runner_run_#13_B_getX_#27_$i0
+goto [?= Runner_run_#13_$i0 = Runner_run_#13_B_getX_#27_ret]
+Runner_run_#13_$i0 = Runner_run_#13_B_getX_#27_ret
+Runner_run_#13_B_getY_#27_r0 = Runner_run_#13_r1
+Runner_run_#13_B_getY_#27_$i0 = Runner_run_#13_B_getY_#27_r0.<B: int y>
+Runner_run_#13_B_getY_#27_ret = Runner_run_#13_B_getY_#27_$i0
+goto [?= Runner_run_#13_$i1 = Runner_run_#13_B_getY_#27_ret]
+Runner_run_#13_$i1 = Runner_run_#13_B_getY_#27_ret
+Runner_run_#13_$i2 = Runner_run_#13_$i0 + Runner_run_#13_$i1
+Runner_run_#13_i3 = Runner_run_#13_i3 + Runner_run_#13_$i2
+Runner_run_#13_i4 = Runner_run_#13_i4 + 1
+goto [?= (branch)]
+Runner_run_#13_$r2 = <java.lang.System: java.io.PrintStream out>
+virtualinvoke Runner_run_#13_$r2.<java.io.PrintStream: void println(int)>(Runner_run_#13_i3)
+goto [?= nop]
+nop
+i1 = i1 + 1
+goto [?= (branch)]
+return
+Soot finished on Tue Apr 30 22:03:21 IST 2024
+Soot has run for 0 min. 28 sec.
